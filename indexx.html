@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4facfe;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hola ??</h1>
+        <p id="mensaje">Pulsa el botón</p>
+        <button onclick="cambiarMensaje()">Click aquí</button>
+    </div>
+
+    <script>
+        const mensajes = [
+            "Hola mundo ??",
+            "Python > todo",
+            "HTML no muerde",
+            "JS está vivo ??",
+            "Buen click"
+        ];
+
+        function cambiarMensaje() {
+            const random = Math.floor(Math.random() * mensajes.length);
+            document.getElementById("mensaje").textContent = mensajes[random];
+        }
+    </script>
+
+</body>
+</html>
